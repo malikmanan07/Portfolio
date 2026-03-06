@@ -1,0 +1,84 @@
+{
+    "basics": {
+        "name": "MaLik Manan",
+        "title": "Creative Web Designer | Front-End Developer | Full Stack Developer",
+        "summary": "I am currently pursuing a Bachelor’s degree in Computer Science from NFC IET Multan. Alongside my studies, I am working as a Front-End Developer, where I focus on web designing and creating user-friendly interfaces. With over 4 years of hands-on experience in React, Vue.js, Node.js, HTML, CSS, Bootstrap, JavaScript, and jQuery, I have developed a strong understanding of responsive and modern web design. Passionate about clean design and smooth user experiences, I’m always eager to learn new technologies and grow as a developer.",
+        "location": "Multan, Punjab, Pakistan",
+        "email": "mnanan07@gmail.com",
+        "phone": "",
+        "links": [
+            {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/in/malik-manan-984394362"
+            }
+        ]
+    },
+    "experience": [
+        {
+            "company": "Resonant Solutions",
+            "role": "Frontend Web Developer",
+            "dates": "January 2022 - Present (4 years 2 months)",
+            "location": "Multan, Punjab, Pakistan",
+            "bullets": [
+                "Design responsive websites using React, Node.js, HTML, CSS, Bootstrap, and jQuery",
+                "Create clean and user-friendly UI layouts",
+                "Ensure mobile and cross-browser compatibility",
+                "Work with the team to implement design ideas",
+                "Update and maintain existing web pages"
+            ]
+        }
+    ],
+    "achievements": [
+        {
+            "item": "4+ years of hands-on experience in modern web technologies",
+            "context": "Professional development experience with React, Vue.js, Node.js, HTML, CSS, and modern frameworks"
+        },
+        {
+            "item": "4+ Years Professional Tenure",
+            "context": "Consistent professional growth and contribution in a full-stack role at Resonant Solutions since 2022."
+        }
+    ],
+    "projects": [],
+    "skills": [
+        {
+            "category": "Top Skills",
+            "items": [
+                "Nuxt.js",
+                "React.js",
+                "Node.js"
+            ]
+        },
+        {
+            "category": "Frontend Stack",
+            "items": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "JavaScript",
+                "jQuery"
+            ]
+        },
+        {
+            "category": "Design & UI",
+            "items": [
+                "Responsive Design",
+                "Modern Web Design",
+                "User-friendly Interfaces",
+                "UI Layouts"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "NFC IET Multan",
+            "degree": "BS Computer Science Student",
+            "dates": "(2024)"
+        }
+    ],
+    "certifications": [],
+    "awards": [],
+    "extra": [
+        "Passionate about clean design and smooth user experiences",
+        "Eager to learn new technologies and grow as a developer"
+    ]
+}
