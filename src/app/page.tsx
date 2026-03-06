@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
 import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Home() {
@@ -41,6 +43,8 @@ export default function Home() {
                     <Achievements />
                     <Experience />
                     <Skills />
+                    <Projects />
+                    <Contact />
 
                     <footer className="py-12 border-t border-white/5 text-center text-slate-500 text-sm">
                         <p>© 2026 MaLik Manan. All rights reserved.</p>

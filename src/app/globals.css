@@ -39,6 +39,18 @@ body {
     border: 1px solid rgba(59, 130, 246, 0.3);
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
   }
+
+  .mouse-pointer {
+    pointer-events: none;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+  }
 }
 
 * {

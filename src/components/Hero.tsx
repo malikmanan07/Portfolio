@@ -43,25 +43,29 @@ export default function Hero({ onExplore }: { onExplore: () => void }) {
                     transition={{ delay: 0.6 }}
                     className="flex flex-wrap items-center justify-center gap-4 pt-10"
                 >
-                    <button
+                    <motion.button
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={onExplore}
-                        className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium flex items-center gap-2 transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
+                        className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
                     >
                         View Experience
                         <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                    </button>
+                    </motion.button>
 
-                    <a
+                    <motion.a
+                        whileHover={{ scale: 1.05, y: -2, border: "1px solid rgba(59,130,246,0.5)" }}
+                        whileTap={{ scale: 0.95 }}
                         href="/resume"
                         className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl font-medium flex items-center gap-2 transition-all backdrop-blur-sm"
                     >
                         <FileText className="w-5 h-5" />
                         View Resume
-                    </a>
+                    </motion.a>
                 </motion.div>
 
                 <div className="flex justify-center gap-6 pt-8">
-                    <a href="mailto:mnanan07@gmail.com" className="text-slate-400 hover:text-white transition-colors">
+                    <a href="mailto:mnmanan07@gmail.com" className="text-slate-400 hover:text-white transition-colors">
                         <Mail className="w-6 h-6" />
                     </a>
                     <a href="https://www.linkedin.com/in/malik-manan-984394362" target="_blank" className="text-slate-400 hover:text-white transition-colors">

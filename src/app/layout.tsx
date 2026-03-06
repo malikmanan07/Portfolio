@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,8 @@ export default function RootLayout({
                 className={`${inter.className} min-h-screen text-slate-200 antialiased selection:bg-blue-500/30 overflow-x-hidden relative`}
                 suppressHydrationWarning
             >
+                <CustomCursor />
+                <Navbar />
                 <AnimatedBackground />
                 {children}
             </body>
