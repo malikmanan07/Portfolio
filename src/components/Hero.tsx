@@ -33,8 +33,8 @@ export default function Hero({ onExplore }: { onExplore: () => void }) {
                     transition={{ delay: 0.4, duration: 1 }}
                     className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
                 >
-                    BS Computer Science student at NFC-IET Multan, passionate about building clean,
-                    responsive, and user-centric web experiences with modern technologies.
+                    BS Computer Science student at NFC-IET Multan, merging deep technical craft with 
+                    advanced AI-augmented workflows to build exceptional, next-gen web experiences.
                 </motion.p>
 
                 <motion.div

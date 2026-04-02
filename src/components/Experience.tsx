@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Briefcase, Calendar, MapPin, CheckCircle2, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import resume from "@/data/resume.json";
 
@@ -42,7 +42,20 @@ export default function Experience() {
                                     <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
                                         {exp.role}
                                     </h3>
-                                    <p className="text-blue-400 font-medium">{exp.company}</p>
+                                    {exp.website ? (
+                                        <a 
+                                            href={exp.website} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="text-blue-400 font-medium hover:underline flex items-center gap-1 mt-1 group/link"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            {exp.company}
+                                            <ExternalLink className="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                                        </a>
+                                    ) : (
+                                        <p className="text-blue-400 font-medium">{exp.company}</p>
+                                    )}
                                 </div>
                             </div>
 

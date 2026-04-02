@@ -2,7 +2,7 @@
     "basics": {
         "name": "MaLik Manan",
         "title": "Creative Web Designer | Front-End Developer | Full Stack Developer",
-        "summary": "I am currently pursuing a Bachelor’s degree in Computer Science from NFC IET Multan. Alongside my studies, I am working as a Front-End Developer, where I focus on web designing and creating user-friendly interfaces. With over 4 years of hands-on experience in React, Vue.js, Node.js, HTML, CSS, Bootstrap, JavaScript, and jQuery, I have developed a strong understanding of responsive and modern web design. Passionate about clean design and smooth user experiences, I’m always eager to learn new technologies and grow as a developer.",
+        "summary": "I am currently pursuing a Bachelor’s degree in Computer Science from NFC IET Multan. Alongside my studies, I am working as a Front-End Developer, where I focus on web designing and creating user-friendly interfaces. With over 4 years of hands-on experience in React, Vue.js, Node.js, and modern JS, I specialize in combining deep technical expertise with advanced AI-augmented development (leveraging agents like Claude and Antigravity) to deliver rapid, high-performance, and high-quality solutions. Passionate about clean design and smooth user experiences, I focus on building efficient and modern web applications.",
         "location": "Multan, Punjab, Pakistan",
         "email": "mnmanan07@gmail.com",
         "phone": "",
@@ -15,16 +15,18 @@
     },
     "experience": [
         {
-            "company": "Resonant Solutions",
+            "company": "Devnaza",
+            "website": "https://devnaza.com/",
             "role": "Frontend Web Developer",
-            "dates": "January 2022 - Present (4 years 2 months)",
+            "dates": "January 2022 - Present",
             "location": "Multan, Punjab, Pakistan",
             "bullets": [
                 "Design responsive websites using React, Node.js, HTML, CSS, Bootstrap, and jQuery",
                 "Create clean and user-friendly UI layouts",
                 "Ensure mobile and cross-browser compatibility",
                 "Work with the team to implement design ideas",
-                "Update and maintain existing web pages"
+                "Update and maintain existing web pages",
+                "Leveraged AI-augmented development workflows (Claude, Antigravity) to significantly boost productivity and focus on high-level architecture."
             ]
         }
     ],
@@ -35,7 +37,7 @@
         },
         {
             "item": "4+ Years Professional Tenure",
-            "context": "Consistent professional growth and contribution in a full-stack role at Resonant Solutions since 2022."
+            "context": "Consistent professional growth and contribution in a full-stack role at Devnaza since 2022."
         }
     ],
     "projects": [],
@@ -45,7 +47,8 @@
             "items": [
                 "Nuxt.js",
                 "React.js",
-                "Node.js"
+                "Node.js",
+                "AI-Augmented Dev"
             ]
         },
         {

@@ -39,7 +39,13 @@ export default function ResumePage() {
                         {resume.experience.map((exp: any, idx: number) => (
                             <div key={idx} className="mb-8 last:mb-0">
                                 <div className="flex flex-col md:flex-row justify-between items-baseline mb-2 gap-2">
-                                    <h3 className="font-bold text-lg text-slate-900 leading-none">{exp.company}</h3>
+                                    <h3 className="font-bold text-lg text-slate-900 leading-none">
+                                        {exp.website ? (
+                                            <a href={exp.website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                                                {exp.company}
+                                            </a>
+                                        ) : exp.company}
+                                    </h3>
                                     <span className="text-xs font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded">{exp.dates}</span>
                                 </div>
                                 <p className="text-sm font-bold text-blue-600/80 mb-4">{exp.role} • {exp.location}</p>

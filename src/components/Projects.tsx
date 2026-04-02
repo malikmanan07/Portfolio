@@ -6,7 +6,7 @@ import { ExternalLink, Github, Code2, Layers } from "lucide-react";
 export default function Projects() {
     const placeholders = [
         {
-            title: "Resonant E-Commerce",
+            title: "Devnaza E-Commerce",
             desc: "A high-performance online store built with React and Node.js.",
             tech: ["React", "Node.js", "Tailwind"],
             link: "#"
