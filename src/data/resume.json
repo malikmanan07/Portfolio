@@ -1,40 +1,40 @@
 {
     "basics": {
-        "name": "MaLik Manan",
+        "name": "MALIK MANAN",
         "title": "Creative Web Designer | Front-End Developer | Full Stack Developer",
-        "summary": "I am currently pursuing a Bachelor’s degree in Computer Science from NFC IET Multan. Alongside my studies, I am working as a Front-End Developer, where I focus on web designing and creating user-friendly interfaces. With over 4 years of hands-on experience in React, Vue.js, Node.js, and modern JS, I specialize in combining deep technical expertise with advanced AI-augmented development (leveraging agents like Claude and Antigravity) to deliver rapid, high-performance, and high-quality solutions. Passionate about clean design and smooth user experiences, I focus on building efficient and modern web applications.",
+        "summary": "Full-Stack Frontend Developer with 4+ years of hands-on experience building modern, responsive web applications. Pursuing BS Computer Science at NFC-IET Multan while working at Devnaza — a global freelance tech agency. Specializes in Vue.js, Nuxt.js, React.js, Node.js & TypeScript. Leverages AI-powered workflows (Claude, Antigravity, Cursor, Windsurf) to ship fast, high-quality solutions for international clients.",
         "location": "Multan, Punjab, Pakistan",
         "email": "mnmanan07@gmail.com",
-        "phone": "",
+        "phone": "+92 301-9293690",
         "links": [
             {
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/in/malik-manan-984394362"
+                "label": "portfolio-malikmanan.vercel.app",
+                "url": "https://portfolio-malikmanan.vercel.app"
             },
             {
-                "label": "GitHub",
-                "url": "https://github.com/malikmanan07"
-            },
-            {
-                "label": "Fiverr",
+                "label": "fiverr.com/malikmanan951",
                 "url": "https://www.fiverr.com/malikmanan951"
+            },
+            {
+                "label": "linkedin.com/in/malik-manan-984394362",
+                "url": "https://www.linkedin.com/in/malik-manan-984394362"
             }
         ]
     },
     "experience": [
         {
             "company": "Devnaza",
-            "website": "https://devnaza.com/",
+            "website": "https://devnaza.com",
             "role": "Frontend Web Developer",
-            "dates": "January 2022 - Present",
+            "dates": "Jan 2022 – Present",
             "location": "Multan, Punjab, Pakistan",
             "bullets": [
-                "Design responsive websites using React, Node.js, HTML, CSS, Bootstrap, and jQuery",
-                "Create clean and user-friendly UI layouts",
-                "Ensure mobile and cross-browser compatibility",
-                "Work with the team to implement design ideas",
-                "Update and maintain existing web pages",
-                "Leveraged AI-augmented development workflows (Claude, Antigravity) to significantly boost productivity and focus on high-level architecture."
+                "Design responsive websites using HTML, CSS, Bootstrap, Tailwind CSS, JavaScript & jQuery",
+                "Build dynamic applications with Vue.js, Nuxt.js & React.js frameworks",
+                "Write clean, scalable TypeScript & JavaScript (ES6+) code following best practices",
+                "Integrate API calls with frontend and collaborate on Node.js & Express.js backends",
+                "Ensure cross-browser & mobile compatibility; deliver pixel-perfect UI layouts",
+                "Leverage AI-augmented workflows (Claude, Antigravity, Cursor) to boost productivity"
             ]
         }
     ],
@@ -48,17 +48,26 @@
             "context": "Consistent professional growth and contribution in a full-stack role at Devnaza since 2022."
         }
     ],
-    "projects": [],
     "skills": [
         {
             "category": "Top Skills",
             "items": [
                 "Nuxt.js",
-                "Vue.js",
                 "React.js",
                 "Node.js",
-                "TypeScript",
                 "AI-Augmented Dev"
+            ]
+        },
+        {
+            "category": "Styling & Tools",
+            "items": [
+                "Tailwind CSS",
+                "CSS",
+                "Bootstrap",
+                "Git",
+                "GitHub",
+                "Vite",
+                "npm"
             ]
         },
         {
@@ -66,10 +75,30 @@
             "items": [
                 "HTML",
                 "CSS",
-                "Tailwind CSS",
                 "Bootstrap",
+                "Tailwind CSS",
                 "JavaScript",
+                "TypeScript",
                 "jQuery"
+            ]
+        },
+        {
+            "category": "AI & VIBE CODING",
+            "items": [
+                "Claude",
+                "Antigravity",
+                "Cursor",
+                "Windsurf",
+                "v0"
+            ]
+        },
+        {
+            "category": "Frameworks",
+            "items": [
+                "Vue.js",
+                "Nuxt.js",
+                "React.js",
+                "Angular"
             ]
         },
         {
@@ -77,18 +106,66 @@
             "items": [
                 "Responsive Design",
                 "Modern Web Design",
-                "User-friendly Interfaces",
-                "UI Layouts"
+                "User-friendly Interfaces"
+            ]
+        },
+        {
+            "category": "Backend",
+            "items": [
+                "Node.js",
+                "Express.js",
+                "API Integration",
+                "API Calls"
+            ]
+        },
+        {
+            "category": "Other",
+            "items": [
+                "C# (Basics)",
+                "Cross-browser Compatibility"
             ]
         }
     ],
     "education": [
         {
-            "institution": "NFC IET Multan",
-            "degree": "BS Computer Science Student",
-            "dates": "(2024)"
+            "institution": "NFC-IET University, Multan",
+            "degree": "BS Computer Science (In Progress)",
+            "dates": "2024 – 2028"
+        },
+        {
+            "institution": "Muslim College Multan",
+            "degree": "Intermediate — ICS",
+            "dates": "2022 – 2024"
+        },
+        {
+            "institution": "Nishat School Multan",
+            "degree": "Matriculation (SSC)",
+            "dates": "2020 – 2022"
         }
     ],
+    "coreSkills": [
+        "HTML • CSS • Bootstrap • Tailwind CSS",
+        "JavaScript (ES6+) • TypeScript • jQuery",
+        "Vue.js • Nuxt.js • React.js • Angular",
+        "Node.js • Express.js • API Integration • API Calls",
+        "Git • GitHub • Vite • npm",
+        "Responsive & Mobile-First Design",
+        "AI-Augmented Development • Vibe Coding",
+        "Claude • Antigravity • Cursor • Windsurf",
+        "UI/UX Implementation • Clean Code",
+        "C# Basics • Cross-browser Compatibility"
+    ],
+    "languages": [
+        {
+            "language": "Urdu",
+            "level": "Native"
+        },
+        {
+            "language": "English",
+            "level": "Intermediate"
+        }
+    ],
+    "projects": [],
     "certifications": [],
     "awards": [],
     "extra": [

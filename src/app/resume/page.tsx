@@ -1,58 +1,59 @@
 "use client";
 
 import resume from "@/data/resume.json";
-import { Mail, Linkedin, MapPin } from "lucide-react";
 
 export default function ResumePage() {
     return (
-        <div className="min-h-screen bg-slate-50 text-slate-900 p-4 md:p-12">
-            <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-sm p-8 md:p-16 print:p-0 print:shadow-none print:m-0">
-                <div className="flex flex-col md:flex-row justify-between items-start border-b-2 border-slate-900 pb-8 mb-8">
-                    <div>
-                        <h1 className="text-4xl font-extrabold tracking-tighter uppercase text-slate-900">{resume.basics.name}</h1>
-                        <p className="text-xl text-slate-500 mt-2 font-medium">{resume.basics.title}</p>
+        <div className="min-h-screen bg-white text-[#333] font-sans p-0 md:p-8">
+            <div className="max-w-[1000px] mx-auto shadow-2xl border border-gray-100 print:shadow-none print:border-none">
+                {/* Header */}
+                <div className="bg-[#1e4471] text-white p-8 md:p-12">
+                    <h1 className="text-5xl font-bold tracking-tight mb-4">{resume.basics.name}</h1>
+                    <p className="text-xl font-light text-blue-100 mb-8">{resume.basics.title}</p>
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-blue-50 font-medium">
+                        <span>{resume.basics.phone}</span>
+                        <span>|</span>
+                        <span>{resume.basics.email}</span>
+                        <span>|</span>
+                        <span>{resume.basics.location}</span>
                     </div>
-                    <div className="mt-6 md:mt-0 text-right space-y-1.5 font-medium">
-                        <div className="flex items-center justify-end gap-2 text-sm text-slate-600">
-                            <span>{resume.basics.email}</span>
-                            <Mail className="w-4 h-4" />
-                        </div>
-                        <div className="flex items-center justify-end gap-2 text-sm text-slate-600">
-                            <span>{resume.basics.location}</span>
-                            <MapPin className="w-4 h-4" />
-                        </div>
-                        <div className="flex items-center justify-end gap-2 text-sm text-blue-600">
-                            <a href={resume.basics.links[0].url} className="hover:underline">LinkedIn Portfolio</a>
-                            <Linkedin className="w-4 h-4" />
-                        </div>
+                    <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-blue-100/80">
+                        {resume.basics.links.map((link, idx) => (
+                            <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline transition-all">
+                                {link.label}
+                            </a>
+                        ))}
                     </div>
                 </div>
 
-                <div className="space-y-10">
+                <div className="p-8 md:p-12 space-y-12">
+                    {/* Professional Summary */}
                     <section>
-                        <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 mb-4 pb-1">Professional Summary</h2>
-                        <p className="text-sm leading-relaxed text-slate-700 font-normal">{resume.basics.summary}</p>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Professional Summary</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        <p className="text-[15px] leading-relaxed text-[#444] font-medium">
+                            {resume.basics.summary}
+                        </p>
                     </section>
 
+                    {/* Professional Experience */}
                     <section>
-                        <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 mb-6 pb-1">Experience</h2>
-                        {resume.experience.map((exp: any, idx: number) => (
-                            <div key={idx} className="mb-8 last:mb-0">
-                                <div className="flex flex-col md:flex-row justify-between items-baseline mb-2 gap-2">
-                                    <h3 className="font-bold text-lg text-slate-900 leading-none">
-                                        {exp.website ? (
-                                            <a href={exp.website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-                                                {exp.company}
-                                            </a>
-                                        ) : exp.company}
-                                    </h3>
-                                    <span className="text-xs font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded">{exp.dates}</span>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Professional Experience</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        {resume.experience.map((exp, idx) => (
+                            <div key={idx} className="mb-0">
+                                <div className="flex justify-between items-baseline mb-1">
+                                    <h3 className="font-bold text-lg text-[#222]">{exp.company}</h3>
+                                    <span className="text-[#1e4471] font-normal italic text-sm">{exp.dates}</span>
                                 </div>
-                                <p className="text-sm font-bold text-blue-600/80 mb-4">{exp.role} • {exp.location}</p>
+                                <div className="flex justify-between items-baseline mb-4 text-[14px]">
+                                    <span className="text-[#1e4471] font-bold">{exp.role}</span>
+                                    <span className="text-gray-500 italic">• {exp.location} • <a href={`https://${exp.website}`} className="hover:underline">{exp.website}</a></span>
+                                </div>
                                 <ul className="space-y-2">
-                                    {exp.bullets.map((bullet: string, bIdx: number) => (
-                                        <li key={bIdx} className="text-sm text-slate-600 flex items-start gap-3">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1.5 shrink-0" />
+                                    {exp.bullets.map((bullet, bIdx) => (
+                                        <li key={bIdx} className="text-[14px] text-[#444] flex items-start gap-3 pl-1">
+                                            <span className="text-[#1e4471] mt-0.5 font-black">•</span>
                                             {bullet}
                                         </li>
                                     ))}
@@ -61,55 +62,98 @@ export default function ResumePage() {
                         ))}
                     </section>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4 border-t border-slate-50">
-                        <section>
-                            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 mb-6 pb-1">Expertise</h2>
+                    {/* Expertise */}
+                    <section>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Expertise</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                             <div className="space-y-6">
-                                {resume.skills.map((group: any, idx: number) => (
+                                {resume.skills.slice(0, 4).map((item, idx) => (
                                     <div key={idx}>
-                                        <h4 className="text-[10px] font-black text-slate-300 uppercase mb-2 tracking-widest">{group.category}</h4>
-                                        <p className="text-sm text-slate-600 leading-relaxed font-medium">{group.items.join(', ')}</p>
+                                        <h4 className="text-[11px] font-extrabold text-[#1e4471] uppercase mb-1 tracking-wider">{item.category}</h4>
+                                        <p className="text-[14px] text-[#444] leading-relaxed font-medium">{item.items.join(' • ')}</p>
                                     </div>
                                 ))}
                             </div>
-                        </section>
-
-                        <section className="space-y-8">
-                            <div>
-                                <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 mb-6 pb-1">Education</h2>
-                                {resume.education.map((edu: any, idx: number) => (
-                                    <div key={idx} className="mb-4">
-                                        <h3 className="font-bold text-sm text-slate-900">{edu.degree}</h3>
-                                        <p className="text-sm text-slate-500">{edu.institution}</p>
-                                        <p className="text-[10px] font-bold text-slate-300 mt-1">{edu.dates}</p>
+                            <div className="space-y-6 border-l-0 md:border-l border-gray-200 md:pl-12">
+                                {resume.skills.slice(4).map((item, idx) => (
+                                    <div key={idx}>
+                                        <h4 className="text-[11px] font-extrabold text-[#1e4471] uppercase mb-1 tracking-wider">{item.category}</h4>
+                                        <p className="text-[14px] text-[#444] leading-relaxed font-medium">{item.items.join(' • ')}</p>
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </section>
 
-                            <div>
-                                <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 mb-6 pb-1">Personal Details</h2>
-                                <div className="space-y-2">
-                                    {resume.extra.map((item: string, idx: number) => (
-                                        <p key={idx} className="text-xs text-slate-500 font-medium italic">
-                                            {item}
-                                        </p>
-                                    ))}
+                    {/* Education */}
+                    <section>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Education</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        <div className="space-y-4">
+                            {resume.education.map((edu, idx) => (
+                                <div key={idx} className="flex justify-between items-baseline">
+                                    <div>
+                                        <h3 className="font-bold text-[15px] text-[#222]">{edu.degree}</h3>
+                                        <p className="text-sm text-gray-500 italic">{edu.institution}</p>
+                                    </div>
+                                    <span className="text-[#1e4471] text-sm italic">{edu.dates}</span>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Core Skills */}
+                    <section>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Core Skills</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+                             {resume.coreSkills.map((skill, idx) => (
+                                <li key={idx} className="text-[14px] text-[#444] list-none flex items-start gap-3 pl-1">
+                                    <span className="text-[#1e4471] mt-0.5 font-black">•</span>
+                                    {skill}
+                                </li>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* Languages */}
+                    <section>
+                        <h2 className="text-[#1e4471] text-sm font-bold uppercase tracking-wider mb-2">Languages</h2>
+                        <div className="w-full h-[1.5px] bg-[#1e4471] mb-6 opacity-40"></div>
+                        <div className="grid grid-cols-2 md:grid-cols-2 gap-x-12">
+                            {resume.languages.map((lang, idx) => (
+                                <div key={idx} className="flex gap-2">
+                                    <span className="font-bold text-[#222]">{lang.language}</span>
+                                    <span className="text-gray-500 font-medium tracking-tight">({lang.level})</span>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
                 </div>
 
-                <div className="mt-16 text-center border-t border-slate-50 pt-8 print:hidden">
-                    <button
-                        onClick={() => window.print()}
-                        className="bg-slate-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-xl"
-                    >
-                        Download PDF Portfolio
-                    </button>
-                    <p className="text-xs text-slate-400 mt-4">Pressing this will open your browser's print dialog. Choose 'Save as PDF'.</p>
-                    <a href="/" className="inline-block mt-8 text-sm text-slate-500 hover:text-slate-900 font-bold underline underline-offset-4">Return to Interactive Site</a>
+                {/* Footer Links */}
+                <div className="border-t border-gray-100 px-12 py-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] text-gray-400 font-medium">
+                    {resume.basics.links.map((link, idx) => (
+                        <span key={idx} className="flex items-center gap-2">
+                            <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4471] transition-all">
+                                {link.label}
+                            </a>
+                            {idx < resume.basics.links.length - 1 && <span className="text-gray-300">•</span>}
+                        </span>
+                    ))}
                 </div>
+            </div>
+
+            {/* Print Button Wrapper */}
+            <div className="max-w-[1000px] mx-auto mt-8 mb-16 text-center print:hidden">
+                <button
+                    onClick={() => window.print()}
+                    className="bg-[#1e4471] text-white px-8 py-3 rounded-full font-bold hover:bg-[#2c5d94] transition-all shadow-lg text-sm flex items-center gap-2 mx-auto"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                    Print Resume / Save as PDF
+                </button>
             </div>
         </div>
     );
