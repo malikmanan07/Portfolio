@@ -115,7 +115,9 @@
                 "Node.js",
                 "Express.js",
                 "API Integration",
-                "API Calls"
+                "API Calls",
+                "PostgreSQL",
+                "Supabase"
             ]
         },
         {
@@ -148,6 +150,7 @@
         "JavaScript (ES6+) • TypeScript • jQuery",
         "Vue.js • Nuxt.js • React.js • Angular",
         "Node.js • Express.js • API Integration • API Calls",
+        "PostgreSQL • Supabase",
         "Git • GitHub • Vite • npm",
         "Responsive & Mobile-First Design",
         "AI-Augmented Development • Vibe Coding",

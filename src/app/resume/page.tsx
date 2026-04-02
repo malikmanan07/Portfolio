@@ -13,7 +13,7 @@ export default function ResumePage() {
                         size: A4 portrait;
                     }
                     html {
-                        font-size: 10.5px !important; /* Stronger scale down so it definitively fits exactly on ONE PAGE */
+                        font-size: 10px !important; /* Stronger scale down so it definitively fits exactly on ONE PAGE */
                     }
                     body {
                         background: white !important;
@@ -49,7 +49,7 @@ export default function ResumePage() {
             <div className="resume-paper bg-white w-full max-w-[850px] shadow-2xl overflow-hidden print:shadow-none mx-auto print:w-full print:max-w-none">
                 
                 {/* Header Match Image - perfectly touches edge due to 0 margin, but we add inner padding print:px-12 (3rem) */}
-                <div className="bg-[#1e4471] text-white px-8 md:px-10 py-6 print:px-12 print:py-6">
+                <div className="bg-[#1e4471] text-white px-8 md:px-10 py-6 print:px-12 print:py-5">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">{resume.basics.name}</h1>
                     <p className="text-[13px] md:text-[15px] font-light text-blue-100 mb-3 block">{resume.basics.title}</p>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11.5px] md:text-[12.5px] text-blue-50 font-medium mb-1">
@@ -72,12 +72,12 @@ export default function ResumePage() {
                 </div>
 
                 {/* Content Match Image - with inner padding to keep text safe from raw physical edges */}
-                <div className="px-8 md:px-10 py-6 space-y-5 print:px-12 print:py-6 print:space-y-4 text-[12.5px] md:text-[13.5px] text-[#222]">
+                <div className="px-8 md:px-10 py-6 space-y-5 print:px-12 print:py-4 print:space-y-3 text-[12.5px] md:text-[13.5px] text-[#222]">
                     
                     {/* PROFESSIONAL SUMMARY */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Professional Summary</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
                         <p className="leading-relaxed text-justify">
                             Full-Stack Frontend Developer with 4+ years of hands-on experience building modern, responsive web applications. Pursuing <span className="font-bold">BS Computer Science at NFC-IET Multan</span> while working at <span className="font-bold">Devnaza</span> — a global freelance tech agency. Specialises in Vue.js, Nuxt.js, React.js, Node.js & TypeScript. Leverages <span className="font-bold">AI-powered workflows</span> (Claude, Antigravity, Cursor, Windsurf) to ship fast, high-quality solutions for international clients.
                         </p>
@@ -86,7 +86,7 @@ export default function ResumePage() {
                     {/* PROFESSIONAL EXPERIENCE */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Professional Experience</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
                         <div className="space-y-4 print:space-y-3">
                             {resume.experience.map((exp, idx) => (
                                 <div key={idx}>
@@ -113,8 +113,8 @@ export default function ResumePage() {
                     {/* EXPERTISE */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Expertise</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
-                        <div className="grid grid-cols-2 gap-x-8 gap-y-4 print:gap-y-3">
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
+                        <div className="grid grid-cols-2 gap-x-8 gap-y-4 print:gap-y-2.5">
                             {/* Left Column */}
                             <div className="space-y-4 print:space-y-3">
                                 {resume.skills.slice(0, 4).map((item, idx) => (
@@ -139,8 +139,8 @@ export default function ResumePage() {
                     {/* EDUCATION */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Education</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
-                        <div className="space-y-3 print:space-y-2">
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
+                        <div className="space-y-3 print:space-y-1.5">
                             {resume.education.map((edu, idx) => (
                                 <div key={idx} className="flex justify-between items-baseline">
                                     <div>
@@ -156,7 +156,7 @@ export default function ResumePage() {
                     {/* CORE SKILLS */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Core Skills</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
                         <ul className="grid grid-cols-2 gap-x-8 gap-y-1.5 print:gap-y-1 list-disc list-outside ml-4">
                             {resume.coreSkills.map((skill, idx) => (
                                 <li key={idx} className="text-[#333] leading-snug pl-1">
@@ -169,7 +169,7 @@ export default function ResumePage() {
                     {/* LANGUAGES */}
                     <section>
                         <h2 className="text-[#1e4471] text-[13.5px] font-bold uppercase tracking-wide mb-1">Languages</h2>
-                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-2"></div>
+                        <div className="resume-divider border-b-2 border-[#8ba9c6] mb-3 print:mb-1.5"></div>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 mb-8 print:mb-2">
                             {resume.languages.map((lang, idx) => (
                                 <div key={idx} className="flex gap-2">
@@ -183,7 +183,7 @@ export default function ResumePage() {
                 </div>
 
                 {/* Footer Links Match Image */}
-                <div className="px-8 md:px-10 pb-6 print:pb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10.5px] text-gray-500 font-medium">
+                <div className="px-8 md:px-10 pb-6 print:pb-3 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10.5px] text-gray-500 font-medium">
                     {resume.basics.links.map((link, idx) => (
                         <span key={idx} className="flex items-center gap-2">
                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-[#1e4471] transition-all">
