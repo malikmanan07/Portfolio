@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -23,7 +25,7 @@ export default function Navbar() {
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={`fixed top-6 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 ${scrolled ? "w-[90%] md:w-auto" : "w-auto"
+            className={`fixed top-6 left-1/2 -translate-x-1/2 z-[90] transition-all duration-300 print:hidden ${scrolled ? "w-[90%] md:w-auto" : "w-auto"
                 }`}
         >
             <div className="glass px-6 py-3 rounded-2xl flex items-center gap-8 shadow-2xl border-white/5 bg-black/50 overflow-hidden relative">
@@ -39,7 +41,7 @@ export default function Navbar() {
                     {links.map((link) => (
                         <a
                             key={link.id}
-                            href={`#${link.id}`}
+                            href={pathname === "/" ? `#${link.id}` : `/#${link.id}`}
                             className="text-[10px] font-black tracking-widest text-slate-400 hover:text-white transition-colors"
                         >
                             {link.name}

@@ -112,7 +112,7 @@ const AnimatedBackground: React.FC = () => {
     }, []);
 
     return (
-        <div className="fixed inset-0 z-[-1] bg-[#020617]">
+        <div className="fixed inset-0 z-[-1] bg-[#020617] print:hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(29,78,216,0.15),transparent_70%)]" />
             <canvas
                 ref={canvasRef}

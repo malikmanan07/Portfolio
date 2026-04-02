@@ -22,7 +22,7 @@ export default function CustomCursor() {
 
     return (
         <motion.div
-            className="mouse-pointer hidden md:block"
+            className="mouse-pointer hidden md:block print:hidden"
             style={{
                 left: cursorX,
                 top: cursorY,
