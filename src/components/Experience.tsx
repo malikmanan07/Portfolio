@@ -110,13 +110,15 @@ export default function Experience() {
                         <span className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-500 italic font-bold">E</span>
                         Education
                     </h3>
-                    {resume.education.map((edu: any, idx: number) => (
-                        <div key={idx} className="glass p-6 rounded-2xl border-white/5 space-y-2">
-                            <h4 className="text-lg font-bold text-white">{edu.institution}</h4>
-                            <p className="text-blue-400">{edu.degree}</p>
-                            <p className="text-slate-500 text-sm">{edu.dates}</p>
-                        </div>
-                    ))}
+                    <div className="space-y-4">
+                        {resume.education.map((edu: any, idx: number) => (
+                            <div key={idx} className="glass p-6 rounded-2xl border-white/5 space-y-2">
+                                <h4 className="text-lg font-bold text-white">{edu.institution}</h4>
+                                <p className="text-blue-400">{edu.degree}</p>
+                                <p className="text-slate-500 text-sm">{edu.dates}</p>
+                            </div>
+                        ))}
+                    </div>
                 </motion.div>
 
                 <motion.div
