@@ -33,15 +33,26 @@ export default function Skills() {
                             {skillGroup.category}
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                            {skillGroup.items.map((skill: string, sIdx: number) => (
-                                <motion.span
-                                    key={sIdx}
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-slate-300 text-sm hover:border-blue-500/50 hover:bg-blue-500/5 transition-all cursor-default"
-                                >
-                                    {skill}
-                                </motion.span>
-                            ))}
+                            {skillGroup.items.map((skill: string, sIdx: number) => {
+                                let colorClass = "bg-white/5 border-white/10 text-slate-300";
+                                if (skillGroup.category === "Top Skills") {
+                                    colorClass = "bg-blue-500/10 border-blue-500/30 text-blue-400";
+                                } else if (skillGroup.category === "Frontend Stack") {
+                                    colorClass = "bg-emerald-500/10 border-emerald-500/30 text-emerald-400";
+                                } else if (skillGroup.category === "Design & UI") {
+                                    colorClass = "bg-purple-500/10 border-purple-500/30 text-purple-400";
+                                }
+                                
+                                return (
+                                    <motion.span
+                                        key={sIdx}
+                                        whileHover={{ scale: 1.1, y: -4, backgroundColor: "rgba(59, 130, 246, 0.15)" }}
+                                        className={`px-4 py-2 border rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-default shadow-sm ${colorClass}`}
+                                    >
+                                        {skill}
+                                    </motion.span>
+                                );
+                            })}
                         </div>
                     </motion.div>
                 ))}

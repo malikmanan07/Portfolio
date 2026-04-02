@@ -10,6 +10,14 @@
             {
                 "label": "LinkedIn",
                 "url": "https://www.linkedin.com/in/malik-manan-984394362"
+            },
+            {
+                "label": "GitHub",
+                "url": "https://github.com/malikmanan07"
+            },
+            {
+                "label": "Fiverr",
+                "url": "https://www.fiverr.com/malikmanan951"
             }
         ]
     },
@@ -46,8 +54,10 @@
             "category": "Top Skills",
             "items": [
                 "Nuxt.js",
+                "Vue.js",
                 "React.js",
                 "Node.js",
+                "TypeScript",
                 "AI-Augmented Dev"
             ]
         },
@@ -56,6 +66,7 @@
             "items": [
                 "HTML",
                 "CSS",
+                "Tailwind CSS",
                 "Bootstrap",
                 "JavaScript",
                 "jQuery"

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, Linkedin, FileText } from "lucide-react";
+import { ArrowDown, Mail, Linkedin, FileText, Github, ExternalLink } from "lucide-react";
 
 export default function Hero({ onExplore }: { onExplore: () => void }) {
     return (
@@ -64,13 +64,44 @@ export default function Hero({ onExplore }: { onExplore: () => void }) {
                     </motion.a>
                 </motion.div>
 
-                <div className="flex justify-center gap-6 pt-8">
-                    <a href="mailto:mnmanan07@gmail.com" className="text-slate-400 hover:text-white transition-colors">
-                        <Mail className="w-6 h-6" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/malik-manan-984394362" target="_blank" className="text-slate-400 hover:text-white transition-colors">
-                        <Linkedin className="w-6 h-6" />
-                    </a>
+                <div className="flex justify-center gap-8 pt-10">
+                    <motion.a 
+                        whileHover={{ scale: 1.2, color: "#fff" }}
+                        href="https://github.com/malikmanan07" 
+                        target="_blank"
+                        className="text-slate-400 transition-colors flex flex-col items-center gap-2"
+                    >
+                        <Github className="w-10 h-10" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">GitHub</span>
+                    </motion.a>
+                    <motion.a 
+                        whileHover={{ scale: 1.2, color: "#fff" }}
+                        href="https://www.fiverr.com/malikmanan951" 
+                        target="_blank"
+                        className="text-slate-400 transition-colors flex flex-col items-center gap-2 group"
+                    >
+                        <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center font-black text-xl group-hover:bg-green-500 transition-colors">
+                            fi
+                        </div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Fiverr</span>
+                    </motion.a>
+                    <motion.a 
+                        whileHover={{ scale: 1.2, color: "#fff" }}
+                        href="https://www.linkedin.com/in/malik-manan-984394362" 
+                        target="_blank"
+                        className="text-slate-400 transition-colors flex flex-col items-center gap-2"
+                    >
+                        <Linkedin className="w-10 h-10" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">LinkedIn</span>
+                    </motion.a>
+                    <motion.a 
+                        whileHover={{ scale: 1.2, color: "#fff" }}
+                        href="mailto:mnmanan07@gmail.com" 
+                        className="text-slate-400 transition-colors flex flex-col items-center gap-2"
+                    >
+                        <Mail className="w-10 h-10" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Email</span>
+                    </motion.a>
                 </div>
             </div>
 

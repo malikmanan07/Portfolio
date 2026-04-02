@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send, Smartphone } from "lucide-react";
+import { Mail, MessageSquare, Send, Smartphone, Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -44,7 +44,30 @@ export default function Contact() {
                         <h3 className="text-2xl font-bold text-white mb-2">Connect</h3>
                         <p className="text-slate-400 mb-6 font-medium">Available for full-time & freelance projects.</p>
                         <div className="flex gap-4">
-                            <span className="px-4 py-2 bg-blue-500/10 rounded-lg text-blue-300 font-bold text-xs uppercase tracking-widest border border-blue-500/20">Active Now</span>
+                            <motion.a 
+                                whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.1)" }}
+                                href="https://github.com/malikmanan07" 
+                                target="_blank"
+                                className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-slate-400 hover:text-white"
+                            >
+                                <Github className="w-5 h-5" />
+                            </motion.a>
+                            <motion.a 
+                                whileHover={{ scale: 1.1, backgroundColor: "rgba(34, 197, 94, 0.2)" }}
+                                href="https://www.fiverr.com/malikmanan951" 
+                                target="_blank"
+                                className="w-10 h-10 flex items-center justify-center rounded-lg bg-green-500/5 border border-green-500/20 text-green-500 hover:bg-green-500/20"
+                            >
+                                <span className="font-black text-sm">fi</span>
+                            </motion.a>
+                            <motion.a 
+                                whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.1)" }}
+                                href="https://www.linkedin.com/in/malik-manan-984394362" 
+                                target="_blank"
+                                className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-500/5 border border-blue-500/20 text-blue-500 hover:bg-blue-500/20"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                            </motion.a>
                         </div>
                     </div>
                 </motion.div>
